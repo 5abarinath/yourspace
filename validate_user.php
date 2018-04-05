@@ -12,6 +12,9 @@
     $result = $stmt->fetch();
     if($password == $result['password']) {
     	echo 1;
+    	setcookie("username", $result['username']);
+    	setcookie("email", $result['email']);
+    	setcookie("id", $result['uid']);
     }
     else {
     	echo 0;

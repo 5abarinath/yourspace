@@ -4,6 +4,7 @@
 ?>
 <html>
 <script src="scripts/validate_user.js"></script>
+<script src="scripts/send_data.js"></script>
 <head>
 	<title>Seminar Hall</title>
 	<link rel="stylesheet" type="text/css" href="css/common-styles.css">
@@ -30,7 +31,7 @@
 	</div>
 	<center><h1 style="color: #fff; margin-top: 50px;">Best Deals</h2></center>
 	<div class="grid-wrapper">
-		<div class="card grid-item" style="background-color: #fff; color: #000; margin-left: 100px;">
+		<div class="card grid-item" id="plan-basic" style="background-color: #fff; color: #000; margin-left: 100px;">
 			<div>
 			<center>
 				<span>BASIC</span>
@@ -49,7 +50,7 @@
 			</center>
 			</div>
 		</div>
-		<div class="card grid-item"  style="background-color: #fff; color: #000; margin-left: 30px; margin-right: 30px;">
+		<div class="card grid-item" id="plan-pro" style="background-color:#fff; color:#000; margin-left: 30px; margin-right: 30px;">
 			<center>
 				<div style="background-color: #fff;">
 					<span>PRO</span>
@@ -70,7 +71,7 @@
 				</div>
 			</center>
 		</div>
-		<div class="card grid-item" style="background-color: #fff; color: #000; margin-right: 100px;">
+		<div class="card grid-item" id="plan-enterprise" style="background-color: #fff; color: #000; margin-right: 100px;">
 			<center>
 				<span>ENTERPRISE</span>
 				<br>
@@ -154,7 +155,7 @@
 						<p><input type="number" name="total_people" id="total_people" placeholder="Total People" required></p>
 						<p><textarea rows="4" name="add_deets" id="add_deets" placeholder="Additional Details"></textarea></p>
 
-						<button type="submit" style="float: right;">Confirm Booking</button>
+						<button type="button" style="float: right;" onclick="formSubmit();">Confirm Booking</button>
 					</div>
 				</div>
 			</div>
@@ -185,6 +186,18 @@
 	</div>
 
 	<script type="text/javascript" src="scripts/modal.js"></script>
+	<script type="text/javascript">
+		var roomType = <? echo $roomType; ?>;
+		document.getElementById("type").value = roomType;
+
+		document.getElementById("plan-basic").onclick = function() { send_data(1); }
+
+		document.getElementById("plan-pro").onclick = function() { send_data(2); }
+			
+		document.getElementById("plan-enterprise").onclick = function() { send_data(3); }
+
+		function formSubmit() {send_data(4);}
+	</script>
 </body>
 </html>
 <!-- fd4b46 -->

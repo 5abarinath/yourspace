@@ -6,7 +6,7 @@ function validate_user(username, password) {
 	console.log(username + " " + password);
 	xhr.onload = function () {
 	    if(this.responseText ==  "1") {
-	    	document.getElementById("login").innerHTML = "";
+	    	document.getElementById("login").innerHTML = username;
 	    	document.getElementById("loginModal").style.display = "none";
 	    	alert("Successful Login");
 	    }
