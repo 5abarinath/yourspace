@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking Page</title>
+	<link rel="stylesheet" type="text/css" href="css/common-styles.css">
+	<style>
+		div.gallery {
+		    margin: 5px;
+		    border: 1px solid #ccc;
+		    float: left;
+		    width: 100%;
+		}
+
+		div.gallery:hover {
+		    border: 1px solid #777;
+		}
+
+		div.gallery img {
+		    width: 100%;
+		    height: 200px;
+		}
+
+		div.desc {
+		    padding: 15px;
+		    text-align: center;
+		}
+	</style>
+</head>
+<script src="scripts/validate_user.js"></script>
+<body>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li class="active"><a href="booking.html">Book</a></li>
+		<li><a href="gallery.html">Gallery</a></li>
+		<!-- <li><a href="about.html">About</a></li> -->
+		<li style="float: right;" id="login">Login</li>
+	</ul>
+	
+	<center><span><h1>Meeting Rooms</h1></span></center>
+	<div class="grid-wrapper" style="grid-template-columns: 24.4% 24.4% 24.4% 24.4%; padding: 20px;">
+		<div class="grid-item" style="background-color: #fff; color: #333;">
+			<div class="gallery">
+			  <a target="_blank" href="images/meet1.png">
+			    <img src="images/meet1.png" alt="Meeting Room">
+			  </a>
+			  <div class="desc">Meeting Room 1</div>
+			</div>
+		</div>
+		<div class="grid-item" style="background-color: #fff; color: #333;">
+			<div class="gallery">
+			  <a target="_blank" href="images/meet2.png">
+			    <img src="images/meet2.png" alt="Meeting Room">
+			  </a>
+			  <div class="desc">Meeting Room 2</div>
+			</div>
+		</div>
+		<div class="grid-item" style="background-color: #fff; color: #333;">
+			<div class="gallery">
+			  <a target="_blank" href="images/meet3.jpeg">
+			    <img src="images/meet3.jpeg" alt="Meeting Room">
+			  </a>
+			  <div class="desc">Meeting Room 3</div>
+			</div>
+		</div>
+		<div class="grid-item" style="background-color: #fff; color: #333;">
+			<div class="gallery">
+			  <a target="_blank" href="images/meet4.jpeg">
+			    <img src="images/meet4.jpeg" alt="Meeting Room">
+			  </a>
+			  <div class="desc">Meeting Room 4</div>
+			</div>
+		</div>
+	</div>
+
+
+	<center><span><h1>Conference Rooms</h1></span></center>
+	<div class="grid-wrapper" style="grid-template-columns: 24.4% 24.4% 24.4% 24.4%; padding: 20px;">
+		<div class="grid-item" style="background-color: #fff; color: #333;">
+			<div class="gallery">
+			  <a target="_blank" href="images/conf1.png">
+			    <img src="images/conf1.png" alt="Meeting Room">
+			  </a>
+			  <div class="desc">Conference Room 1</div>
+			</div>
+		</div>
+		<div class="grid-item" style="background-color: #fff; color: #333;">
+			<div class="gallery">
+			  <a target="_blank" href="images/conf2.png">
+			    <img src="images/conf2.png" alt="Meeting Room">
+			  </a>
+			  <div class="desc">Conference Room 2</div>
+			</div>
+		</div>
+		<div class="grid-item" style="background-color: #fff; color: #333;">
+			<div class="gallery">
+			  <a target="_blank" href="images/conf3.jpeg">
+			    <img src="images/conf3.jpeg" alt="Meeting Room">
+			  </a>
+			  <div class="desc">Conference Room 3</div>
+			</div>
+		</div>
+		<div class="grid-item" style="background-color: #fff; color: #333;">
+			<div class="gallery">
+			  <a target="_blank" href="images/conf4.jpeg">
+			    <img src="images/conf4.jpeg" alt="Meeting Room">
+			  </a>
+			  <div class="desc">Conference Room 4</div>
+			</div>
+		</div>
+	</div>
+
+
+	<center><span><h1>Seminar Halls</h1></span></center>
+	<div class="grid-wrapper" style="grid-template-columns: 24.4% 24.4% 24.4% 24.4%; padding: 20px;">
+		<div class="grid-item" style="background-color: #fff; color: #333;">
+			<div class="gallery">
+			  <a target="_blank" href="images/board1.jpg">
+			    <img src="images/board1.jpg" alt="Meeting Room">
+			  </a>
+			  <div class="desc">Seminar Hall 1</div>
+			</div>
+		</div>
+		<div class="grid-item" style="background-color: #fff; color: #333;">
+			<div class="gallery">
+			  <a target="_blank" href="images/board2.jpg">
+			    <img src="images/board2.jpg" alt="Meeting Room">
+			  </a>
+			  <div class="desc">Seminar Hall 2</div>
+			</div>
+		</div>
+		<div class="grid-item" style="background-color: #fff; color: #333;">
+			<div class="gallery">
+			  <a target="_blank" href="images/board3.jpg">
+			    <img src="images/board3.jpg" alt="Meeting Room">
+			  </a>
+			  <div class="desc">Seminar Hall 3</div>
+			</div>
+		</div>
+		<div class="grid-item" style="background-color: #fff; color: #333;">
+			<div class="gallery">
+			  <a target="_blank" href="images/board4.jpg">
+			    <img src="images/board4.jpg" alt="Meeting Room">
+			  </a>
+			  <div class="desc">Seminar Hall 4</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="loginModal" class="modal">
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <span class="close" id="closeModal">&times;</span>
+	      <h2>Login</h2>
+	    </div>
+	    <div class="modal-body">
+		    <center>
+		    	<form style="padding: 20px; margin: 10px;">
+		    		<input type="text" name="username" id="username" required placeholder="Username"><br><br>
+		    		<input type="password" name="password" id="password" required placeholder="Password"><br><br>
+		    		<button type="button" onclick="validate_user(document.getElementById('username').value, document.getElementById('password').value);">Login</button>
+		    	</form>
+		    	Don't have an account?<a href="signup.html"> Sign up here</a>
+		    </center>
+	    </div>
+	    <!-- <div class="modal-footer">
+	      <h3>Modal Footer</h3>
+	    </div> -->
+	  </div>
+	</div>
+
+	<script type="text/javascript" src="scripts/modal.js"></script>
+</body>
+</html>

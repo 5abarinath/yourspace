@@ -28,7 +28,7 @@
 				<center>
 					<h1 style="color: #000;">Sign Up</h1>
 				</center>
-				<form id="signupForm" method="post" action="signup.jsp">
+				<form id="signupForm">
 					<input type="text" name="username" id="username" placeholder="Username" required><br><br>
 					<input type="email" name="email" id="email" placeholder="E-mail" required><br><br>
 					<input type="password" name="password" id="password" placeholder="Password" required><br><br>
@@ -41,12 +41,13 @@
 	</div>
 	<script type="text/javascript">
 		var submit = document.getElementById("submitButton");
+		var name, number, email, pass1;
 		submit.onclick = function() {
-			var name = document.getElementById("username").value;
-			var number = document.getElementById("phone").value;
+			name = document.getElementById("username").value;
+			number = document.getElementById("phone").value;
 			var error = 0;
-			var email = document.getElementById("email").value;
-			var pass1 = document.getElementById("password").value;
+			email = document.getElementById("email").value;
+			pass1 = document.getElementById("password").value;
 			var pass2 = document.getElementById("password2").value;
 
 			if(name == "" || number == "" || email == "" || pass1 == "" || pass2 == "") {
@@ -75,9 +76,15 @@
 				}
 			}
 			if(error == 0) {
-				alert("Success");
-				console.log("Success");
-				document.getElementById("signupForm").submit(); 
+				var xhr = new XMLHttpRequest();
+				xhr.open('POST', 'signup.php', true);
+				xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+				var params = "username=" + name + "&email=" + email + "&password=" + pass1 + "&number=" + number;
+				console.log(username + " " + password);
+				xhr.onload = function () {
+					alert("New User Registered");
+				};
+				xhr.send(params);
 			}
 		}
 	</script>
