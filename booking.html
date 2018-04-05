@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking Page</title>
+	<link rel="stylesheet" type="text/css" href="css/common-styles.css">
+</head>
+<script src="scripts/validate_user.js"></script>
+<script type="text/javascript">
+	function goBtnOnClick() {
+		var selectedOption = document.getElementById("typeSelect").value;
+		var url = "bookRoom.php?type=" + selectedOption;
+		window.location = url;
+	}
+</script>
+<body style="background-image: url('images/bg.jpeg');">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li class="active"><a href="booking.html">Book</a></li>
+		<li><a href="gallery.html">Gallery</a></li>
+		<li><a href="about.html">About</a></li>
+		<li style="float: right;" id="login">Login</li>
+	</ul>
+	<br><br>
+	<br><br><br><br>
+	<center><h1 style="color: #fff;">Choose what you want to book</h1></center>
+	<br><br>
+	<center>
+		<div class="styled-select black semi-square" style="color:#fff">
+			<select id="typeSelect">
+				<option value="1">Seminar Hall</option>
+				<option value="2">Meeting Room</option>
+				<option value="3">Conference Room</option>
+			</select>
+		</div>
+		<br><br><br>
+		<button class="circular-button" onclick="goBtnOnClick();">GO</button>
+	</center>
+
+	<div id="loginModal" class="modal">
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <span class="close" id="closeModal">&times;</span>
+	      <h2>Login</h2>
+	    </div>
+	    <div class="modal-body">
+		    <center>
+		    	<form style="padding: 20px; margin: 10px;">
+		    		<input type="text" name="username" id="username" required placeholder="Username"><br><br>
+		    		<input type="password" name="password" id="password" required placeholder="Password"><br><br>
+		    		<button type="button" onclick="validate_user(document.getElementById('username').value, document.getElementById('password').value);">Login</button>
+		    	</form>
+		    	Don't have an account?<a href="signup.html"> Sign up here</a>
+		    </center>
+	    </div>
+	    <!-- <div class="modal-footer">
+	      <h3>Modal Footer</h3>
+	    </div> -->
+	  </div>
+	</div>
+
+	<script type="text/javascript" src="scripts/modal.js"></script>
+</body>
+</html>

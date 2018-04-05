@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="css/common-styles.css">
+	<style type="text/css">
+		.card:hover {
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		}
+	</style>
+</head>
+
+<body style="background-image: url('images/bg.jpeg');">
+	<div class="navbar-wrapper">
+		<div class="navbar">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="booking.html">Book</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="about.html">About</a></li>
+				<li class="active" style="float: right;" id="login">Login</li>
+			</ul>
+		</div>
+	</div>
+	<div>
+		<center>
+			<div class="card" style="width: 500px; background-color: #fff; padding: 20px; padding-top: 0px; margin-top: 50px;">
+				<center>
+					<h1 style="color: #000;">Sign Up</h1>
+				</center>
+				<form id="signupForm" method="post" action="signup.jsp">
+					<input type="text" name="username" id="username" placeholder="Username" required><br><br>
+					<input type="email" name="email" id="email" placeholder="E-mail" required><br><br>
+					<input type="password" name="password" id="password" placeholder="Password" required><br><br>
+					<input type="password" name="password2" id="password2" placeholder="Re-enter password" required><br><br>
+					<input type="number" name="phone" id="phone" placeholder="Phone Number" required><br><br>
+					<button type="button" id="submitButton">Submit</button>
+				</form>
+			</div>
+		</center>
+	</div>
+	<script type="text/javascript">
+		var submit = document.getElementById("submitButton");
+		submit.onclick = function() {
+			var name = document.getElementById("username").value;
+			var number = document.getElementById("phone").value;
+			var error = 0;
+			var email = document.getElementById("email").value;
+			var pass1 = document.getElementById("password").value;
+			var pass2 = document.getElementById("password2").value;
+
+			if(name == "" || number == "" || email == "" || pass1 == "" || pass2 == "") {
+				alert("Fields are empty");
+				error = 1;
+			}
+			else {
+				if(!email.includes("@") || !email.includes(".")) {
+					alert("Invalid email id");
+					error = 1;
+				}
+				else if(number.length < 10) {
+					alert("Invalid Mobile Number.\nPlease enter 10 digits");
+					number.value = "";
+					error = 1;
+				} 
+				else if(pass1.length < 8) {
+					alert("Password length must be atleast 8 chracters");
+					error = 1;
+				}
+				else if(!(pass1 == pass2)) {
+					alert("Passwords do not match");
+					pass1.value = "";
+					pass2.value = "";
+					error = 1;
+				}
+			}
+			if(error == 0) {
+				alert("Success");
+				console.log("Success");
+				document.getElementById("signupForm").submit(); 
+			}
+		}
+	</script>
+</body>
+</html>
+<!-- style="background-color: #595959" -->

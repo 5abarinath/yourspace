@@ -1,0 +1,89 @@
+<!-- https://www.regus.co.in/meeting-rooms#chooseofftype -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meeting Room Booking</title>
+<link rel="stylesheet" type="text/css" href="css/home-styles.css">
+<link rel="stylesheet" type="text/css" href="css/common-styles.css">
+</head>
+<script src="scripts/validate_user.js"></script>
+<body>
+
+
+  
+<ul style="position: fixed">
+	<li class="active"><a href="index.html">Home</a></li>
+	<li><a href="booking.html">Book</a></li>
+	<li><a href="gallery.html">Gallery</a></li>
+	<li><a href="about.html">About</a></li>
+  <li style="float: right;" id="login">Login</li>
+</ul>
+
+<div class="bgimg-1">
+  <div class="caption">
+	<span class="border">MEETING ROOM BOOKING</span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;">Meeting Rooms</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis pulvinar eros vel commodo. Suspendisse vitae justo eget ligula rhoncus vestibulum eu sed dui. Nam lacinia, leo et scelerisque vestibulum, sapien mauris facilisis tellus, at egestas tortor justo sed ante. Vestibulum aliquam varius condimentum. Donec odio dui, accumsan non facilisis id, lacinia eget velit. In nec dolor sagittis, tincidunt nulla ut, tincidunt nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam libero libero, malesuada quis blandit eget, tempor vitae purus. In hac habitasse platea dictumst. Cras hendrerit, diam eget faucibus sagittis, nulla est convallis nibh, sit amet rhoncus nulla nisi non nisi. </p>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+	<span class="border">SEMINAR HALLS</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis pulvinar eros vel commodo. Suspendisse vitae justo eget ligula rhoncus vestibulum eu sed dui. Nam lacinia, leo et scelerisque vestibulum, sapien mauris facilisis tellus, at egestas tortor justo sed ante. Vestibulum aliquam varius condimentum. Donec odio dui, accumsan non facilisis id, lacinia eget velit. In nec dolor sagittis, tincidunt nulla ut, tincidunt nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam libero libero, malesuada quis blandit eget, tempor vitae purus. In hac habitasse platea dictumst. Cras hendrerit, diam eget faucibus sagittis, nulla est convallis nibh, sit amet rhoncus nulla nisi non nisi. </p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+	<span class="border">CONFERENCE ROOMS</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis pulvinar eros vel commodo. Suspendisse vitae justo eget ligula rhoncus vestibulum eu sed dui. Nam lacinia, leo et scelerisque vestibulum, sapien mauris facilisis tellus, at egestas tortor justo sed ante. Vestibulum aliquam varius condimentum. Donec odio dui, accumsan non facilisis id, lacinia eget velit. In nec dolor sagittis, tincidunt nulla ut, tincidunt nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam libero libero, malesuada quis blandit eget, tempor vitae purus. In hac habitasse platea dictumst. Cras hendrerit, diam eget faucibus sagittis, nulla est convallis nibh, sit amet rhoncus nulla nisi non nisi. </p>
+  </div>
+</div>
+
+<!-- <div class="bgimg-1">
+  <div class="caption">
+	<span class="border">THANK YOU</span>
+  </div>
+</div> -->
+
+<!-- color:#ddd;background-color:#282E34; -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Login</h2>
+      </div>
+      <div class="modal-body">
+        <center>
+          <form style="padding: 20px; margin: 10px;">
+            <input type="text" name="username" id="username" required placeholder="Username"><br><br>
+            <input type="password" name="password" id="password" required placeholder="Password"><br><br>
+            <button type="button" onclick="validate_user(document.getElementById('username').value, document.getElementById('password').value);">Login</button>
+          </form>
+          Don't have an account?<a href="signup.html"> Sign up here</a>
+        </center>
+      </div>
+      <!-- <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div> -->
+    </div>
+  </div>
+
+  <script type="text/javascript" src="scripts/modal.js"></script>
+</body>
+</html>
